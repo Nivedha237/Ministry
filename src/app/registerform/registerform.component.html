@@ -1,0 +1,309 @@
+<p>registerform works!</p>
+
+<div class="register">
+    <h3 style="text-align:center"><b>FRESH STUDENT REGISTRATION FORM</b> </h3>
+  <br/>
+  <div class=form-group>
+  <form [formGroup]="registrationform"  (ngSubmit)="addStudent()" >
+
+  <label> STATE OF DOMICILE: </label>
+  <select  name="STATE OF DOMICILE" id="Dropdown button"  class="form-control" formControlName="state">
+      <option value="1">Andhra Pradesh</option>
+      <option value="2">Andaman and Nicobar Islands</option>
+      <option value="3">Arunachal Pradesh</option>
+      <option value="4">Assam</option>
+      <option value="5">Bihar</option>
+      <option value="6">Chandigarh</option>
+      <option value="7">Chhattisgarh</option>
+      <option value="8">Dadar and Nagar Haveli</option>
+      <option value="9">Daman and Diu</option>
+      <option value="10">Delhi</option>
+      <option value="11">Lakshadweep</option>
+      <option value="12">Puducherry</option>
+      <option value="13">Goa</option>
+      <option value="14">Gujarat</option>
+      <option value="15">Haryana</option>
+      <option value="16">Himachal Pradesh</option>
+      <option value="17">Jammu and Kashmir</option>
+      <option value="18">Jharkhand</option>
+      <option value="19">Karnataka</option>
+      <option value="20">Kerala</option>
+      <option value="21">Madhya Pradesh</option>
+      <option value="22">Maharashtra</option>
+      <option value="23">Manipur</option>
+      <option value="24">Meghalaya</option>
+      <option value="25">Mizoram</option>
+      <option value="26">Nagaland</option>
+      <option value="27">Odisha</option>
+      <option value="28">Punjab</option>
+      <option value="29">Rajasthan</option>
+      <option value="30">Sikkim</option>
+      <option value="31">Tamil Nadu</option>
+      <option value="32">Telangana</option>
+      <option value="33">Tripura</option>
+      <option value="34">Uttar Pradesh</option>
+      <option value="35">Uttarakhand</option>
+      <option value="36">West Bengal</option>
+
+      </select>
+      <br/>
+      <br/>
+
+     
+
+  
+  
+        <label>DISTRICT:</label>
+        <select id="Dropdown button">
+        
+        <option value="1">Anantapur</option>
+        <option>chittor</option>
+        <option>East Godavari</option>
+        <option>Guntur</option>
+
+        <option>Kadapa</option>
+
+        <option>Krishna</option>
+
+        <option>Kurnool</option>
+
+        <option>Prakasam</option>
+
+        <option>Nellore</option>
+        <option>Srikakulam</option>
+
+        <option>Visakhapatnam</option>
+
+        <option>Vizianagaram</option>
+        <option>West Godavari</option>
+
+        <option>"Anjaw</option>
+
+        <option>Changlang</option>
+        <option>Dibang Valley</option>
+
+        <option>East Kameng</option>
+        <option>Kra Daadi</option>
+        <option>Kurung Kumey"</option>
+        <option>Lohit</option>
+        <option>Longding</option>
+        <option>Lower Dibang Valley</option>
+        <option>Lower Subansiri</option>
+      <option>Namsai</option>
+<option>Papum Pare</option>
+
+
+  </select>
+  
+  <br/>
+  <br/>
+  <br/>
+<div class="form-group">
+  
+  <label> NAME: <br/>(AS IN MARKS SHEETS) </label>
+  <input type ="text"  class="form-control" formControlName="uname" > 
+  
+
+  <div *ngIf="!registrationform.get('uname')?.valid && (registrationform.get('uname')?.dirty || registrationform.get('uname')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('uname')?.errors?.['required']">
+        <small class="text-danger">Please enter the NAME</small>            
+    </div>
+    </div>
+    </div>
+
+
+  
+  <label> DOB: <input type="date">
+    </label>
+  <br/>
+  <br/>
+  <br/>
+
+  <label> GENDER: </label>
+  <select id="Dropdown button">
+  <option>Female</option>
+  <option>Male</option>
+  <option>Others</option>
+  
+  </select> 
+  <br/>
+  <br/>
+  
+  &nbsp; &nbsp;
+
+  <br/>
+  
+  <div class="form-group">
+
+  <label> MOBILE NUMBER: </label>
+  <input type="text"  class="form-control" formControlName="mobnum">
+
+
+  <div *ngIf="!registrationform.get('mobnum')?.valid && (registrationform.get('mobnum')?.dirty || registrationform.get('mobnum')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('mobnum')?.errors?.['required']">
+        <small class="text-danger">PLEASE ENTER YOUR NUMBER</small>
+        
+    </div>
+</div>
+</div>
+  
+  <div class="form-group">
+
+  <label>EMAIL ID: </label>
+  <input type="text"   class="form-control" formControlName="email">
+
+  <div *ngIf="!registrationform.get('email')?.valid && (registrationform.get('email')?.dirty || registrationform.get('email')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('email')?.errors?.['required']">
+        <small class="text-danger">PLEASE ENTER YOUR EMAIL</small>
+        
+    </div>
+</div>
+</div>
+  
+  
+
+  <div class="form-group">
+
+  <label> INSTITUTE CODE: </label>
+  
+  <input type="text" class="form-control" formControlName="Icode"> &nbsp;
+
+  <div *ngIf="!registrationform.get('Icode')?.valid && (registrationform.get('Icode')?.dirty || registrationform.get('Icode')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('Icode')?.errors?.['required']">
+        <small class="text-danger">PLEASE ENTER YOUR Institute Code</small>
+        
+    </div>
+</div>
+</div>
+
+<div class="form-group">
+
+  <label> AADHAR NUMBER: </label>
+  
+  <input type="text" class="form-control" formControlName="aadhar">
+
+  <div *ngIf="!registrationform.get('aadhar')?.valid && (registrationform.get('aadhar')?.dirty || registrationform.get('aadhar')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('aadhar')?.errors?.['required']">
+        <small class="text-danger">PLEASE ENTER YOUR AADHAR NUMBER</small>
+    </div>
+  </div>
+</div>
+        
+  <br/>
+  
+  <br/>
+  
+  <br/>
+  <div class="form-group">
+
+  <label> BANK IFSC CODE: </label>
+  
+  <input type="text" class="form-control" formControlName="IFSC"> &nbsp;
+
+  <div *ngIf="!registrationform.get('IFSC')?.valid && (registrationform.get('IFSC')?.dirty || registrationform.get('IFSC')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('IFSC')?.errors?.['required']">
+        <small class="text-danger">PLEASE ENTER YOUR IFSC CODE</small>
+    </div>
+  </div>
+</div>
+  
+  
+<div class="form-group">
+
+  <label> BANK ACCOUNT NUMBER: </label>
+  
+  <input type="text" class="form-control" formControlName="Bnum">
+  <div *ngIf="!registrationform.get('Bum')?.valid && (registrationform.get('Bnum')?.dirty || registrationform.get('Bnum')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('Bnum')?.errors?.['required']">
+        <small class="text-danger">PLEASE ENTER YOUR BANK NUMBER</small>
+    </div>
+  </div>
+</div>
+  
+  <br/>
+  
+  <br/>
+  <br/>
+  
+  
+  
+  <div class="form-group">
+
+  <label> BANK NAME: </label>
+  
+  <input type="text" class="form-control" formControlName="Bname">
+
+  <div *ngIf="!registrationform.get('Bname')?.valid && (registrationform.get('Bname')?.dirty || registrationform.get('Bname')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('Bname')?.errors?.['required']">
+        <small class="text-danger">PLEASE ENTER YOUR BANK NAME</small>
+    </div>
+  </div>
+</div>
+  
+  
+  <br/>
+  <br/>
+  <br/>
+  
+  
+  <div class="form-group">
+
+  <label>SET YOUR PASSWORD: </label>
+  
+  <input type="text" class="form-control" formControlName="Bname">
+  <div *ngIf="!registrationform.get('Bname')?.valid && (registrationform.get('Bname')?.dirty || registrationform.get('Bname')?.touched)" class="error">
+
+    <div *ngIf="registrationform.get('Bname')?.errors?.['required']">
+        <small class="text-danger">PLEASE ENTER YOUR BANK NAME</small>
+    </div>
+  </div>
+</div>
+  
+  <br/>
+  
+  <br/>
+  <br/>
+  
+  <label>CONFIRM PASSWORD: </label>
+  
+  <input type="text">
+  
+  <br/>
+  
+  <br/>
+  <br/>
+  
+  <input type="checkbox"> &nbsp;
+  
+  <label> ALL THE ABOVE INFORMATION FURNISED BY ME IS TRUE TO THE BEST OF MY KNOWLEDGE</label>
+  <br/>
+  <br/>
+  
+  &nbsp;
+  
+  
+  <button class="btn btn-primary" type="submit" >
+  
+  
+  REGISTER
+  
+  
+  </button>
+  &nbsp;
+  <button class="btn btn-info" type="reset" >
+  
+  RESET  
+  
+  </button>
+  </form>
+  </div>
+  
+  </div>
